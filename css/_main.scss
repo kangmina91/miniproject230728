@@ -1,0 +1,132 @@
+.Main__content {
+  position: relative;
+  margin: 0 0 0 120rem;
+
+  .main {
+    position: relative;
+    background: url(../images/main01.jpg) center top/cover;
+
+    .inner {
+      .txt_box {
+        position: absolute;
+        right: 15%;
+        top: 250rem;
+        color: $color-white;
+
+        span {
+          display: block;
+          font-size: 32rem;
+          font-weight: 200;
+          color: $color-line;
+          margin: 0 0 16rem 0;
+          animation: TxtDownAni 1s both;
+        }
+
+        strong {
+          display: block;
+          font-size: 72rem;
+          letter-spacing: 0.025em;
+          font-weight: 700;
+          margin: 0 0 32rem 0;
+          animation: TxtDownAni02 1s both;
+          animation-delay: 1s;
+        }
+
+        p {
+          font-size: 18rem;
+          line-height: 28rem;
+          animation: TxtUpAni 1s both;
+          animation-delay: 1.5s;
+        }
+
+      }
+
+      /* 메인 슬라이드 스크롤 효과 */
+
+      .scroll_box {
+        position: relative;
+        left: calc(100% - 60rem);
+        bottom: -330rem;
+        z-index: 1001;
+
+        span {
+          position: relative;
+          color: $color-white;
+          font-size: 12rem;
+          text-transform: uppercase;
+
+          &::before {
+
+            content: "";
+            position: absolute;
+            top: 20rem;
+            left: 50%;
+            width: 1px;
+            height: 100rem;
+            background: $color-white;
+            transform: translate(-50%, 0);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 24rem;
+            left: 50%;
+            width: 5rem;
+            height: 5rem;
+            background: $color-white;
+            border-radius: 50%;
+            transform: translate(-50%, 0);
+            animation: circle 2s infinite cubic-bezier(1, .18, .49, 1.03);
+
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -102rem;
+          left: 12rem;
+          width: 10rem;
+          height: 2rem;
+          background: $color-rgba25505;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -102rem;
+          left: 20rem;
+          width: 10rem;
+          height: 2rem;
+          background: $color-rgba25505;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+
+  .sub01 {
+    display: flex;
+
+
+    .left {
+      width: calc(100% / 2);
+      height: 100vh;
+      background: $color-black;
+      inset: 0 0 0 0;
+    }
+
+    .right {
+      width: calc(100% / 2);
+      height: 100vh;
+      background: $color-white;
+      inset: 0 0 0 0;
+    }
+
+  }
+
+
+}

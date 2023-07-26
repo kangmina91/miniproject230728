@@ -1,0 +1,529 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@keyframes TxtDownAni {
+  0% {
+    opacity: 0;
+    transform: translate(0, -50rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes TxtDownAni02 {
+  0% {
+    opacity: 0;
+    transform: translate(0, -25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes TxtUpAni {
+  0% {
+    opacity: 0;
+    transform: translate(0, 50rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes TxtrightAni {
+  0% {
+    opacity: 0;
+    transform: translate(-100rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes TxtleftAni {
+  0% {
+    opacity: 0;
+    transform: translate(100rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, 9rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 18rem);
+    opacity: 0;
+  }
+}
+@keyframes circle {
+  0% {
+    transform: translate(-50%, -50%);
+    outline: 0 solid rgb(255, 255, 255);
+  }
+  80% {
+    outline: 0 solid rgb(255, 255, 255);
+  }
+  100% {
+    transform: translate(-50%, 90rem);
+    outline: 20rem solid rgba(255, 255, 255, 0);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: normal;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:hover {
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+i,
+em,
+address {
+  font-style: normal;
+}
+
+body {
+  line-height: 1;
+  color: #333;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+  font-size: 16rem;
+}
+
+html {
+  font-size: 6.25%;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* line-height : 3rem + 3rem */
+p {
+  line-height: 1.375;
+}
+
+.inner {
+  max-width: 1600rem;
+  margin: 0 auto;
+  padding: 0 7.5rem;
+}
+
+.btn_m {
+  display: block;
+  border-radius: 32rem;
+  font-size: 20rem;
+  font-weight: 600;
+  background: #d11a45;
+  padding: 15rem;
+  margin: 0 auto;
+  width: 300rem;
+  transition: 0.2s;
+  animation: TxtUpAni 1s both;
+  animation-delay: 0.7s;
+}
+.btn_m:hover {
+  background-color: #f08200;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 32rem;
+  font-size: 20rem;
+  font-weight: 600;
+  background: #d11a45;
+  padding: 15rem 60rem;
+  margin: 0 auto;
+  transition: 0.2s;
+  color: #fff;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #f08200;
+}
+
+.mobile_btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 아이폰 반응형 대응 방식 */
+  html {
+    /* vw 390인 디바이스를 기준으로 폰트 사이즈를 pc에서 쓰는 rem과 동일하게 만드는 법 */
+    font-size: 0.2564102564vw;
+    /* 390 size에 맞춤 (16/390*6.25/100) 디자인 사이즈 */
+  }
+}
+/* 그냥 반응형을 만들어버리는 소스 */
+.r_inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 120rem;
+  right: 0;
+  z-index: 999;
+  padding: 0 15rem;
+  max-width: 1600rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header a {
+  line-height: 120rem;
+}
+.header.on {
+  filter: invert(100%);
+}
+.header .right_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50rem;
+  position: relative;
+}
+.header .right_menu::after {
+  content: "";
+  position: absolute;
+  right: 250rem;
+  width: 1px;
+  height: 24rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+.header .right_menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120rem;
+}
+.header .right_menu ul li {
+  position: relative;
+  overflow: hidden;
+  width: 36rem;
+  height: 120rem;
+  margin: 0 0 0 20rem;
+}
+.header .right_menu ul li .sns_box a {
+  width: 100%;
+  height: 120rem;
+  display: block;
+}
+.header .right_menu ul li .sns_box a img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.4s;
+  width: 24rem;
+}
+.header .right_menu ul li .sns_box a .sns_txt {
+  transform: translateX(40rem);
+  width: 100%;
+  height: 23rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.header .right_menu ul li .sns_box a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 40rem;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.5s;
+  z-index: -1;
+}
+.header .right_menu ul li .sns_box a:hover .sns_img {
+  transform: translateX(-40rem);
+}
+.header .right_menu ul li .sns_box a:hover .sns_txt {
+  transform: translateX(0);
+}
+.header .right_menu ul li .sns_box a:hover::after {
+  width: 100%;
+}
+.header .right_menu .tel {
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 36rem;
+  font-weight: 700;
+}
+.header .right_menu .tel i {
+  color: #fff;
+  font-size: 28rem;
+  vertical-align: top;
+  padding: 8rem 10rem;
+}
+
+.left_menu {
+  position: absolute;
+  width: 120rem;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #2f3339;
+  padding: 50rem 0;
+}
+.left_menu h2 {
+  margin: 0 0 25vh 0;
+}
+.left_menu h2 a {
+  display: block;
+  text-align: center;
+}
+.left_menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30rem;
+  overflow: auto;
+}
+.left_menu ul li {
+  position: relative;
+  height: 100%;
+}
+.left_menu ul li a {
+  font-size: 18rem;
+  line-height: 100rem;
+  font-weight: 900;
+  color: #6c6e71;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+}
+.left_menu ul li:hover a, .left_menu ul li.on a {
+  color: #fff;
+}
+.left_menu ul li::after {
+  content: "";
+  position: absolute;
+  right: -10rem;
+  top: 0;
+  width: 3rem;
+  height: 0;
+  background: #fff;
+}
+.left_menu ul li:hover::after {
+  content: "";
+  position: absolute;
+  right: -10rem;
+  top: 0;
+  width: 3rem;
+  height: 100%;
+  background: #fff;
+  transition: 0.5s;
+}
+.left_menu ul li.on::after {
+  content: "";
+  position: absolute;
+  right: -10rem;
+  top: 0;
+  width: 3rem;
+  height: 100%;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.gnb {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  padding: 0 15rem;
+}
+.gnb ul li a {
+  position: relative;
+  display: block;
+  width: 100rem;
+  height: 28rem;
+  color: #fff;
+}
+.gnb ul li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  font-size: 20rem;
+  text-transform: uppercase;
+}
+.gnb ul li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50%;
+  height: 2rem;
+  background: #fff;
+  transition: width 0.3s;
+}
+.gnb ul li.on a span {
+  display: block;
+  transform: translate(-100%, 0);
+}
+.gnb ul li.on a::after {
+  width: 100%;
+}
+
+.Main__content {
+  position: relative;
+  margin: 0 0 0 120rem;
+}
+.Main__content .main {
+  position: relative;
+  background: url(../images/main01.jpg) center top/cover;
+}
+.Main__content .main .inner {
+  /* 메인 슬라이드 스크롤 효과 */
+}
+.Main__content .main .inner .txt_box {
+  position: absolute;
+  right: 15%;
+  top: 250rem;
+  color: #fff;
+}
+.Main__content .main .inner .txt_box span {
+  display: block;
+  font-size: 32rem;
+  font-weight: 200;
+  color: #ddd;
+  margin: 0 0 16rem 0;
+  animation: TxtDownAni 1s both;
+}
+.Main__content .main .inner .txt_box strong {
+  display: block;
+  font-size: 72rem;
+  letter-spacing: 0.025em;
+  font-weight: 700;
+  margin: 0 0 32rem 0;
+  animation: TxtDownAni02 1s both;
+  animation-delay: 1s;
+}
+.Main__content .main .inner .txt_box p {
+  font-size: 18rem;
+  line-height: 28rem;
+  animation: TxtUpAni 1s both;
+  animation-delay: 1.5s;
+}
+.Main__content .main .inner .scroll_box {
+  position: relative;
+  left: calc(100% - 60rem);
+  bottom: -330rem;
+  z-index: 1001;
+}
+.Main__content .main .inner .scroll_box span {
+  position: relative;
+  color: #fff;
+  font-size: 12rem;
+  text-transform: uppercase;
+}
+.Main__content .main .inner .scroll_box span::before {
+  content: "";
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  width: 1px;
+  height: 100rem;
+  background: #fff;
+  transform: translate(-50%, 0);
+}
+.Main__content .main .inner .scroll_box span::after {
+  content: "";
+  position: absolute;
+  top: 24rem;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  animation: circle 2s infinite cubic-bezier(1, 0.18, 0.49, 1.03);
+}
+.Main__content .main .inner .scroll_box::before {
+  content: "";
+  position: absolute;
+  bottom: -102rem;
+  left: 12rem;
+  width: 10rem;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+}
+.Main__content .main .inner .scroll_box::after {
+  content: "";
+  position: absolute;
+  bottom: -102rem;
+  left: 20rem;
+  width: 10rem;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(-45deg);
+}
+.Main__content .sub01 {
+  display: flex;
+}
+.Main__content .sub01 .left {
+  width: 50%;
+  height: 100vh;
+  background: #000;
+  inset: 0 0 0 0;
+}
+.Main__content .sub01 .right {
+  width: 50%;
+  height: 100vh;
+  background: #fff;
+  inset: 0 0 0 0;
+}/*# sourceMappingURL=style.css.map */
