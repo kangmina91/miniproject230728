@@ -2,7 +2,7 @@ $(function () {
 
 
     $('.Main__content').fullpage({
-        anchors: ['main', 'complex', 'club_xian'],
+        anchors: ['main', 'complex', 'club_xian', 'sysclein', 'system'],
         navigation: false,
         css3: false,
         // 반응형에서 fullpage 안하기
@@ -18,14 +18,27 @@ $(function () {
 
             // $('.gnb li').eq(idx - 1).addClass('on').siblings().removeClass('on');
             $('.Main__content .section').eq(idx - 1).addClass('on').siblings().removeClass('on');
+
         },
         onLeave: function (idx, nidx, dir) {
-            if (idx == 1) {
+            $('.gnb li').eq(nidx - 1).addClass('on').siblings().removeClass('on');
+            console.log(idx, nidx, dir)
+
+            if (idx == 2) {
                 $('.header').addClass('on');
-            } else {
-                $('.header').removeClass('on');
+                $('.header h1').addClass('on');
+            } else if (idx == 3 || idx == 4) {
+                $('.header').addClass('on');
+                $('.header h1').removeClass('on');
             }
-        },
+            else {
+                $('.header').removeClass('on');
+                $('.header h1').removeClass('on');
+            }
+        }
+
+
+
 
         // css3: true,
         // scrollingSpeed: 700,
@@ -52,6 +65,20 @@ $(function () {
         // scrollOverflowReset: false,
         // touchSensitivity: 15,
         // bigSectionsDestination: null,
+    });
+
+    // 
+    $('.sub02 .tab_link li').on('click', function (event) {
+        event.preventDefault();
+
+        let idx = $(this).index();
+
+        $(this).addClass('on').siblings().removeClass('on');
+
+        $('.sub02 .tab_content .con').eq(idx).addClass('on').siblings().removeClass('on');
+
+        console.log(event, event.target, event.currentTarget, $(this), $(this).index());
+
     });
 
 

@@ -9,12 +9,22 @@
     margin: 0 auto;
     @include flex_sb();
 
-    a {
-        line-height: 120rem;
-    }
+
 
     &.on {
         filter: invert(100%);
+    }
+
+    h1 {
+        a {
+            line-height: 120rem;
+
+
+        }
+
+        &.on {
+            filter: invert(100%);
+        }
     }
 
     .right_menu {
@@ -206,7 +216,7 @@
 
 .gnb {
     position: fixed;
-    bottom: 0;
+    bottom: 50%;
     right: 0;
     z-index: 999;
     padding: 0 15rem;
@@ -216,16 +226,17 @@
             a {
                 position: relative;
                 display: block;
-                width: 100rem;
-                height: 28rem;
-                color: $color-white;
+                width: 36rem;
+                height: 16rem;
+                color: $color-black;
 
                 span {
                     position: absolute;
                     top: 0;
                     left: 0;
                     display: none;
-                    font-size: 20rem;
+                    font-size: 12rem;
+                    font-weight: 700;
                     text-transform: uppercase;
                 }
 
@@ -236,7 +247,7 @@
                     right: 0;
                     width: 50%;
                     height: 2rem;
-                    background: $color-white;
+                    background: $color-black;
                     transition: width 0.3s;
                 }
             }
