@@ -1,0 +1,714 @@
+// 헤더섹션
+@media (max-width: 768px) {
+    .header {
+        left: 0;
+
+        &.on {
+            filter: invert(100%);
+        }
+
+        h1 {
+            a {
+                line-height: 120rem;
+
+
+            }
+
+            &.on {
+                filter: invert(100%);
+            }
+        }
+
+        .right_menu {
+            @include flex_sb();
+            gap: 50rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 200rem;
+                width: 1px;
+                height: 24rem;
+                background: $color-rgba25505;
+            }
+
+            ul {
+                @include flex_sb();
+                height: 120rem;
+
+                li {
+                    position: relative;
+                    overflow: hidden;
+                    width: 24rem;
+                    height: 120rem;
+                    margin: 0 0 0 20rem;
+
+                    .sns_box {
+                        a {
+                            width: 100%;
+                            height: 120rem;
+                            display: block;
+
+                            img {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                                margin: auto;
+                                transition: 0.4s;
+                            }
+
+                            .sns_txt {
+                                transform: translateX(40rem);
+                                width: 100%;
+                                height: 23rem;
+                                object-fit: contain;
+                            }
+
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                bottom: 40rem;
+                                width: 0;
+                                height: 1px;
+                                background-color: $color-white;
+                                transition: 0.5s;
+                                z-index: -1;
+                            }
+
+                            &:hover {
+                                .sns_img {
+                                    transform: translateX(-40rem);
+                                }
+
+                                .sns_txt {
+                                    transform: translateX(0);
+                                }
+
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tel {
+                color: $color-white;
+                white-space: nowrap;
+                text-align: center;
+                font-size: 28rem;
+                font-weight: 700;
+
+                i {
+                    color: $color-white;
+                    font-size: 24rem;
+                    padding: 8rem 10rem;
+                }
+            }
+        }
+    }
+
+    .left_menu {
+        display: none;
+    }
+
+    .gnb {
+        position: fixed;
+        bottom: 50%;
+        right: 0;
+        z-index: 999;
+        padding: 0 15rem;
+
+        &.on {
+
+            a {
+                color: $color-black;
+
+                &::after {
+                    background: $color-black;
+                }
+            }
+
+        }
+
+        ul {
+            li {
+                a {
+                    position: relative;
+                    display: block;
+                    width: 36rem;
+                    height: 16rem;
+                    color: $color-white;
+
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        font-size: 12rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        width: 50%;
+                        height: 2rem;
+                        background: $color-white;
+                        transition: width 0.3s;
+                    }
+                }
+
+                &.on {
+                    a {
+                        span {
+                            display: block;
+                            transform: translate(-100%, 0);
+                        }
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 메인섹션 
+@media (max-width: 768px) {
+
+    .Main__content {
+        margin: 0 0 0 0;
+
+        .main {
+
+            .inner {
+                .txt_box {
+                    position: absolute;
+                    left: 20%;
+                    top: 25%;
+
+                    color: $color-white;
+
+                    span {
+                        display: block;
+                        font-size: 20rem;
+                        font-weight: 200;
+                        color: $color-line;
+                        margin: 0 0 16rem 0;
+                        animation: TxtDownAni 1s both;
+                    }
+
+                    strong {
+                        display: block;
+                        font-size: 36rem;
+                        letter-spacing: 0.025em;
+                        font-weight: 700;
+                        margin: 0 0 32rem 0;
+                    }
+
+                    p {
+                        font-size: 24rem;
+                        line-height: 28rem;
+                        margin: 0 0 16rem 0;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 서브섹션1
+@media (max-width: 768px) {
+    .Main__content {
+        .sub01 {
+            .left {
+                width: calc(100% / 2);
+                float: left;
+                height: 100vh;
+                background: $color-black;
+
+                .content {
+                    padding: 132rem 15rem;
+                    max-width: 700rem;
+                    margin: 0 auto;
+                    color: $color-white;
+
+
+                    .title_box {
+                        margin: 0 0 36rem 0;
+
+
+                        span {
+                            font-size: 24rem;
+                            font-weight: 200;
+                            display: block;
+                            margin: 0 0 8rem 0;
+                        }
+
+                        strong {
+                            font-size: 32rem;
+                            font-weight: 700;
+                            color: $color-mf;
+                        }
+                    }
+
+                    .img_box {
+                        margin: 0 0 40rem 0;
+                    }
+
+                    .txt_box {
+                        ul {
+                            display: grid;
+                            grid-template-columns: repeat(1, 1fr);
+                            gap: 20rem;
+
+                            li {
+                                strong {
+                                    display: block;
+                                    color: $color-mf;
+                                    font-size: 18rem;
+                                    font-weight: 700;
+                                    margin: 0 0 8rem 0;
+                                }
+
+                                p {
+                                    font-weight: 200;
+                                    color: $color-rgba25505;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: calc(100% / 2);
+                float: right;
+                height: 100vh;
+                background: $color-white;
+
+                .content {
+                    padding: 132rem 15rem;
+                    max-width: 700rem;
+                    margin: 0 auto;
+
+                    .txt_box {
+                        margin: 0 0 30rem 0;
+
+                        ul {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            gap: 36rem;
+
+                            li {
+                                strong {
+                                    display: block;
+                                    color: $color-mf;
+                                    font-size: 18rem;
+                                    font-weight: 700;
+                                    margin: 0 0 8rem 0;
+                                }
+
+                                p {
+                                    font-weight: 400;
+                                    color: $color-dark;
+                                }
+                            }
+                        }
+                    }
+
+                    .img_box {
+                        position: relative;
+
+                        .btn_box {
+                            width: 224rem;
+                            height: 54rem;
+                            left: 0;
+                            bottom: 0;
+                            position: absolute;
+                            background-color: #9d9d9d;
+                            color: #fff;
+                            font-weight: 400;
+                            line-height: 54rem;
+
+                            a {
+                                display: block;
+                                padding-left: 20rem;
+                                width: 100%;
+                                height: 100%;
+
+                                i {
+                                    font-size: 24rem;
+                                    margin: 0 0 0 24rem;
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+    }
+}
+
+// 서브섹션2
+@media (max-width: 768px) {
+    .Main__content {
+        .sub02 {
+            background: url(../images/commu_bg.jpg) center top/cover;
+
+            .content {
+                padding: 100rem 15rem 0 15rem;
+                display: grid;
+                grid-template-columns: 3fr 4fr;
+                gap: 124rem;
+
+                .txt_box {
+                    .title_box {
+                        margin: 0 0 36rem 0;
+
+
+                        span {
+                            font-size: 24rem;
+                            font-weight: 300;
+                            color: $color-dark;
+                            display: block;
+                            margin: 0 0 8rem 0;
+                        }
+
+                        strong {
+                            font-size: 32rem;
+                            font-weight: 700;
+                            color: $color-black;
+                        }
+                    }
+
+                    ul {
+                        display: grid;
+                        grid-template-columns: repeat(1, 1fr);
+                        gap: 24rem;
+                        margin: 0 0 64rem 0;
+
+                        li {
+                            strong {
+                                display: block;
+                                color: $color-mf;
+                                font-size: 18rem;
+                                font-weight: 700;
+                                margin: 0 0 4rem 0;
+                            }
+
+                            p {
+                                font-weight: 400;
+                                color: $color-dark;
+                            }
+                        }
+                    }
+
+                    .btn_box {
+                        width: 224rem;
+                        height: 54rem;
+                        background-color: #9d9d9d;
+                        color: #fff;
+                        font-weight: 400;
+                        line-height: 54rem;
+                        border-radius: 30rem;
+                        overflow: hidden;
+
+                        a {
+                            display: block;
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+
+                        }
+                    }
+                }
+
+                .img_box {
+                    position: relative;
+
+                    .tab_link {
+                        position: absolute;
+                        top: -8rem;
+                        right: 0;
+
+                        display: flex;
+                        justify-content: center;
+                        gap: 12rem;
+
+                        >li {
+                            width: 100rem;
+                            height: 100rem;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1px solid #363636;
+                            background-color: #fff;
+                            text-align: center;
+                            color: #252525;
+                            cursor: pointer;
+
+                            :first-child {
+                                margin-left: 0;
+                            }
+
+                            h3 {
+                                font-family: 'Roboto', sans-serif;
+                                font-size: 28rem;
+                                line-height: 100%;
+                                font-weight: 700;
+                            }
+
+                            p {
+                                font-size: 12rem;
+                                line-height: 100%;
+                                padding-top: 8rem;
+                                position: relative;
+                                display: inline-block;
+                                margin-top: 4rem;
+                            }
+
+                            p:before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 1px;
+                                background-color: #adaeb0;
+                            }
+
+                            &.on {
+                                background-color: #252525;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    .tab_content {
+                        .con {
+                            visibility: hidden;
+                            height: 0;
+                            overflow: hidden;
+
+                            &.on {
+                                visibility: visible;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 서브섹션3
+@media (max-width: 768px) {
+    .Main__content {
+        .sub03 {
+            background: url(../images/clein_bg.jpg) center top/cover;
+            position: relative;
+
+            .content {
+                .title_box {
+                    text-align: center;
+
+                    strong {
+                        display: block;
+                        font-size: 20rem;
+                        font-weight: 400;
+                        margin: 0 0 8rem 0;
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 14rem;
+                        margin: 0 0 0 370rem;
+                    }
+                }
+
+                .s_txt_box {
+                    .itm {
+                        position: absolute;
+
+                        Strong {
+                            display: block;
+                            font-size: 24rem;
+                            font-weight: 600;
+                            color: #3687b9;
+                            margin: 0 0 20rem 0;
+                        }
+
+                        p {
+                            font-size: 16rem;
+                            font-weight: 500;
+                            line-height: 24rem;
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: -36rem;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            width: 1px;
+                            height: 420rem;
+                            background: $color-white;
+
+                        }
+                    }
+
+                    .itm01 {
+                        left: 240rem;
+                        top: 152rem;
+                    }
+
+                    .itm02 {
+                        left: 400rem;
+                        bottom: 240rem;
+                    }
+
+                    .itm03 {
+                        right: 240rem;
+                        bottom: 60rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 서브섹션4
+@media (max-width: 768px) {
+    .Main__content {
+        .sub04 {
+            background: url(../images/system_bg.jpg) center top/cover;
+
+            .content {
+                color: $color-white;
+
+                .title_box {
+                    text-align: center;
+                    margin: 0 0 60rem 0;
+
+                    strong {
+                        display: block;
+                        font-size: 80rem;
+                        font-weight: 700;
+                        letter-spacing: 0.05em;
+                        margin: 0 0 8rem 0;
+                    }
+
+                    p {
+                        font-weight: 500;
+                        color: $color-gf;
+                    }
+                }
+
+                .txt_box {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 36rem;
+
+
+                    .itm {
+                        border: 1px solid $color-gf;
+                        padding: 48rem;
+                        min-height: 480rem;
+                        transition: 0.5s;
+                        position: relative;
+
+                        strong {
+                            display: block;
+                            font-size: 32rem;
+                            margin: 0 0 48rem 0;
+                        }
+
+                        ul {
+                            li {
+                                margin: 0 0 20rem 0;
+                                font-weight: 600;
+                                color: $color-gf;
+                            }
+                        }
+
+                        figure {
+                            position: absolute;
+                            right: 48rem;
+                            bottom: 48rem;
+                            filter: invert(100%);
+                        }
+
+                        &:hover {
+                            background: $color-white;
+                            transform: translateY(-36rem);
+
+                            strong {
+                                filter: invert(100%);
+                            }
+
+                            figure {
+                                filter: invert(0);
+                            }
+                        }
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+}
+
+// 푸터 섹션
+@media (max-width: 768px) {
+    .ㄹooter {
+        .content {
+            flex-direction: column;
+            gap: 40rem;
+        }
+
+        .left {
+            ul li~li::before {
+                display: none;
+            }
+        }
+
+        .contact,
+        .adress,
+        .reference {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .reference {
+            text-align: center;
+        }
+
+        span {
+            text-align: center;
+        }
+    }
+}

@@ -132,3 +132,54 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
+
+.section {
+  .title_box {
+    opacity: 0;
+    transition: 0.5s 0.5s;
+  }
+
+  .s_txt_box {
+    opacity: 0;
+    transition: 0.5s 0.5s;
+  }
+
+  .txt_box {
+    opacity: 0;
+    transition: 0.5s 0.5s;
+  }
+
+  .img_box {
+    opacity: 0;
+    transition: 0.5s 0.5s;
+  }
+
+
+}
+
+.section.on {
+  .title_box {
+    animation: TxtDownAni 1.5s both;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .s_txt_box {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .txt_box {
+    animation: TxtUpAni 1.5s both;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .img_box {
+    opacity: 1;
+    transition: 0.5s 1s;
+  }
+
+
+}

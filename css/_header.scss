@@ -32,12 +32,10 @@
         gap: 50rem;
         position: relative;
 
-
-
         &::after {
             content: "";
             position: absolute;
-            right: 250rem;
+            right: 200rem;
             width: 1px;
             height: 24rem;
             background: $color-rgba25505;
@@ -50,7 +48,7 @@
             li {
                 position: relative;
                 overflow: hidden;
-                width: 36rem;
+                width: 24rem;
                 height: 120rem;
                 margin: 0 0 0 20rem;
 
@@ -68,7 +66,6 @@
                             right: 0;
                             margin: auto;
                             transition: 0.4s;
-                            width: 24rem;
                         }
 
                         .sns_txt {
@@ -113,13 +110,12 @@
             color: $color-white;
             white-space: nowrap;
             text-align: center;
-            font-size: 36rem;
+            font-size: 28rem;
             font-weight: 700;
 
             i {
                 color: $color-white;
-                font-size: 28rem;
-                vertical-align: top;
+                font-size: 24rem;
                 padding: 8rem 10rem;
             }
         }
@@ -221,6 +217,18 @@
     z-index: 999;
     padding: 0 15rem;
 
+    &.on {
+
+        a {
+            color: $color-black;
+
+            &::after {
+                background: $color-black;
+            }
+        }
+
+    }
+
     ul {
         li {
             a {
@@ -228,7 +236,7 @@
                 display: block;
                 width: 36rem;
                 height: 16rem;
-                color: $color-black;
+                color: $color-white;
 
                 span {
                     position: absolute;
@@ -247,7 +255,7 @@
                     right: 0;
                     width: 50%;
                     height: 2rem;
-                    background: $color-black;
+                    background: $color-white;
                     transition: width 0.3s;
                 }
             }
