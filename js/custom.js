@@ -1,66 +1,92 @@
 $(function () {
-  $(".section").addClass("on");
-  if ($(window).width() > 768) {
-    $(".Main__content").fullpage({
-      anchors: ["main", "complex", "club_xian", "sysclein", "system"],
-      navigation: false,
-      css3: false,
-      // 반응형에서 fullpage 안하기
-      // scrollBar: true,
-      //responsiveHeight: 1200,
-      // easing: 'easeInOutCubic',
-      // easingcss3: 'ease',
+  // 윈도우 크기가  768보다 작을 때 작동해라
+  if ($(window).width() < 768) {
+    $(".Main__content .section").addClass("on");
+  }
 
-      // 초기 셋팅
-      afterRender: function () {
-        $(".section").eq(0).addClass("on");
-      },
-      // 전환되고 나서
-      afterLoad: function (lnk, idx) {
-        console.log(lnk, idx);
+  // 풀페이지
+  $(".Main__content").fullpage({
+    anchors: ["overview", "complex", "club_xian", "sysclein", "system"],
+    navigation: false,
+    css3: false,
+    responsiveWidth: 768,
+
+    // 초기 셋팅
+    afterRender: function () {
+      if ($(window).width() > 768)
+        $(".Main__content .section").eq(0).addClass("on");
+    },
+    // 전환되고 나서
+    afterLoad: function (lnk, idx) {
+      // 윈도우 크기가  768보다 클 때 작동해라
+      if ($(window).width() > 768)
 
         if (idx == 6) {
-          $(".section")
+          // idx 가 6일 때 애니메이션 한번만 작동하고 멈추게 함.
+          $(".Main__content .section")
             .eq(idx - 1)
             .addClass("on");
         } else {
-          $(".section")
+          $(".Main__content .section")
             .eq(idx - 1)
             .addClass("on")
             .siblings()
             .removeClass("on");
         }
-      },
-      // 전환되기 직전에
-      beforeLeave: function (idx, nidx, dir, origin) { },
-      // 전환되는 중에
-      onLeave: function (idx, nidx, dir) {
-        $(".gnb li")
-          .eq(nidx - 1)
-          .addClass("on")
-          .siblings()
-          .removeClass("on");
+    },
+    // 전환되기 직전에
+    beforeLeave: function (idx, nidx, dir, origin) { },
+    // 전환되는 중에
+    onLeave: function (idx, nidx, dir) {
+      // 풀페이지 메뉴 작동 시키기
+      $(".gnb li")
+        .eq(nidx - 1)
+        .addClass("on")
+        .siblings()
+        .removeClass("on");
 
-        console.log(idx, nidx, dir);
 
-        if (nidx == 2) {
+      // 페이지별로 헤더 색 맞춰주기
+      if (nidx == 2) {
+        if ($(window).width() > 768)
           $(".gnb").addClass("on");
-          $(".header").addClass("on");
-          $(".header h1").addClass("on");
-        } else if (nidx == 3 || nidx == 4) {
+        $(".header").addClass("on");
+        $(".header h1").addClass("on");
+      } else if (nidx == 3 || nidx == 4) {
+        if ($(window).width() > 768)
           $(".gnb").addClass("on");
-          $(".header").addClass("on");
-          $(".header h1").removeClass("on");
-        } else {
+        $(".header").addClass("on");
+        $(".header h1").removeClass("on");
+      } else {
+        if ($(window).width() > 768)
           $(".gnb").removeClass("on");
-          $(".header").removeClass("on");
-          $(".header h1").removeClass("on");
-        }
-      },
+        $(".header").removeClass("on");
+        $(".header h1").removeClass("on");
+      }
+    },
+  });
 
 
-    });
-  }
+  // 모바일 메뉴 작동
+  $('.gnb>ul>li>a').on('click', function (e) {
+    if ($('.gnb').hasClass('on')) {
+      // 풀페이지에서는  e.preventDefault(); 를 지워야 메뉴 터치 시 이동이 가능
+      //e.preventDefault();
+      $(this).next().stop().slideToggle();
+    }
+  });
+
+  // 모바일 버튼  작동
+  $('.mobile_btn').on('click', function () {
+    $(this).toggleClass('on');
+    $('.gnb').toggleClass('on');
+  })
+
+
+  $(window).on('resize', function () {
+    $('.gnb').removeClass('on');
+  })
+
 
   //탭
   $(".sub02 .tab_link li").on("click", function (event) {
@@ -84,31 +110,4 @@ $(function () {
       $(this).index()
     );
   });
-
-
-
-
-  // 모바일
-  $('.gnb>ul>li>a').on('click', function (e) {
-    if ($('.gnb').hasClass('on')) {
-      e.preventDefault();
-      $(this).next().stop().slideToggle();
-    }
-
-  });
-
-
-  $('.mobile_btn').on('click', function () {
-    $(this).toggleClass('on');
-    $('.gnb').toggleClass('on');
-  })
-
-
-  $(window).on('resize', function () {
-    $('.gnb').removeClass('on');
-  })
-
-
-
-
 });
