@@ -32,7 +32,7 @@ $(function () {
         }
       },
       // 전환되기 직전에
-      beforeLeave: function (idx, nidx, dir, origin) {},
+      beforeLeave: function (idx, nidx, dir, origin) { },
       // 전환되는 중에
       onLeave: function (idx, nidx, dir) {
         $(".gnb li")
@@ -58,31 +58,7 @@ $(function () {
         }
       },
 
-      // css3: true,
-      // scrollingSpeed: 700,
-      // autoScrolling: true,
-      // fitToSection: true,
-      // fitToSectionDelay: 600,
-      // scrollBar: false,
-      // easing: 'easeInOutCubic',
-      // easingcss3: 'ease',
-      // loopBottom: false,
-      // loopTop: false,
-      // loopHorizontal: true,
-      // continuousVertical: false,
-      // continuousHorizontal: false,
-      // scrollHorizontally: false,
-      // interlockedSlides: false,
-      // dragAndMove: false,
-      // offsetSections: false,
-      // resetSliders: false,
-      // fadingEffect: false,
-      // normalScrollElements: '#element1, .element2',
-      // scrollOverflow: true,
-      // scrollOverflowMacStyle: false,
-      // scrollOverflowReset: false,
-      // touchSensitivity: 15,
-      // bigSectionsDestination: null,
+
     });
   }
 
@@ -108,4 +84,31 @@ $(function () {
       $(this).index()
     );
   });
+
+
+
+
+  // 모바일
+  $('.gnb>ul>li>a').on('click', function (e) {
+    if ($('.gnb').hasClass('on')) {
+      e.preventDefault();
+      $(this).next().stop().slideToggle();
+    }
+
+  });
+
+
+  $('.mobile_btn').on('click', function () {
+    $(this).toggleClass('on');
+    $('.gnb').toggleClass('on');
+  })
+
+
+  $(window).on('resize', function () {
+    $('.gnb').removeClass('on');
+  })
+
+
+
+
 });

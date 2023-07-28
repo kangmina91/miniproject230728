@@ -6,9 +6,15 @@
     position: fixed;
     top: 0;
     left: 0;
+    border-bottom: 1px solid $color-line ;
 
     h1 {
+
       filter: invert(100%);
+      position: fixed;
+      z-index: 999;
+
+
     }
 
     .right_menu {
@@ -20,8 +26,124 @@
     display: none;
   }
 
+
   .gnb {
-    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 0;
+    z-index: 999;
+    background: #f9f9f9;
+    padding: 0 15rem;
+    width: calc(100% / 2);
+    border-right: 1px solid $color-line ;
+    transition: 0.5s;
+
+    &.on {
+      left: 0;
+      inset: 0 0 0 0;
+    }
+
+    ul {
+      li {
+        a {
+          position: relative;
+          bottom: -150rem;
+          margin: 0 0 60rem 0;
+
+          span {
+            display: block;
+            font-size: 28rem;
+            font-weight: 500;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+
+        &.on {
+          a {
+            span {
+              transform: translate(0, 0);
+            }
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// 모바일 버튼
+@media (max-width: 768px) {
+
+  /* r */
+  .mobile_btn {
+    /* r */
+    display: block;
+
+    position: fixed;
+    inset: 15rem 15rem auto auto;
+    z-index: 1000;
+    width: 30rem;
+    height: 30rem;
+    background: #ddd;
+    border-radius: 5rem;
+
+    &::before,
+    &::after {
+
+      content: "";
+      position: absolute;
+      inset: 14rem 5rem auto 5rem;
+      height: 2rem;
+      background: #444;
+    }
+
+    &.on::before {
+      transform: rotate(45deg);
+      transition: 0.5s 0.2s;
+    }
+
+    &.on::after {
+      transform: rotate(-45deg);
+      transition: 0.5s 0.6s;
+    }
+
+
+    &.on button::before,
+    &.on button::after {
+      display: none;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background: transparent;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2rem;
+        background: #444;
+      }
+
+      &::before {
+        inset: 7rem 5rem auto 5rem;
+      }
+
+      &::after {
+        inset: auto 5rem 7rem 5rem;
+      }
+    }
   }
 }
 
@@ -32,8 +154,10 @@
 
     .main {
       background: url(../images/main01.jpg) center center/cover;
+
       .inner {
         padding: 300rem 15rem;
+
         .txt_box {
           position: absolute;
           left: 55%;
@@ -74,10 +198,13 @@
     .sub01 {
       display: grid;
       grid-template-columns: 1 1fr;
+
       .left {
         width: 100%;
+
         .content {
           padding: 64rem 15rem;
+
           .title_box {
             span {
               font-size: 20rem;
@@ -93,10 +220,13 @@
       .right {
         width: 100%;
         height: 100%;
+
         .content {
           padding: 64rem 15rem 100rem 15rem;
+
           .txt_box {
             margin: 0 0 32rem 0;
+
             ul {
               display: grid;
               grid-template-columns: repeat(1, 1fr);
@@ -111,6 +241,7 @@
               left: 50%;
               transform: translate(-50%, -50%);
               bottom: -108rem;
+
               a {
                 i {
                   font-size: 20rem;
@@ -129,6 +260,7 @@
   .Main__content {
     .sub02 {
       background: url(../images/commu_bg.jpg) center top/cover;
+
       .content {
         padding: 64rem 15rem;
         display: grid;
@@ -151,16 +283,20 @@
           ul {
             margin: 0 auto 32rem auto;
           }
+
           .btn_box {
             margin: 0 auto;
           }
         }
+
         .img_box {
           .tab_link {
             top: -36rem;
-            > li {
+
+            >li {
               width: 60rem;
               height: 60rem;
+
               h3 {
                 font-size: 20rem;
               }
@@ -177,14 +313,18 @@
   .Main__content {
     .sub03 {
       background: url(../images/clein_bg.jpg) right 40% bottom/cover;
+
       .content {
         padding: 64rem 0;
+
         .title_box {
           margin: 0 auto 64rem auto;
           width: 80%;
+
           strong {
             font-size: 16rem;
           }
+
           span {
             margin: 0 0 0 256rem;
           }
@@ -196,8 +336,10 @@
           justify-content: center;
           gap: 40rem;
           text-shadow: 2rem 1rem 20rem $color-rgba025;
+
           .itm {
             position: static;
+
             &::before {
               display: none;
             }
@@ -214,8 +356,10 @@
     .sub04 {
       .content {
         padding: 64rem 0;
+
         .title_box {
           margin: 0 0 36rem 0;
+
           strong {
             display: block;
             font-size: 64rem;
@@ -233,10 +377,12 @@
           .itm {
             border: none;
             min-height: 100%;
+
             strong {
               font-size: 28rem;
               margin: 0 0 32rem 0;
             }
+
             figure {
               display: none;
             }
@@ -250,13 +396,33 @@
 // 푸터 섹션
 @media (max-width: 768px) {
   .footer {
+
+    padding: 0 0 50rem 0;
+
     .content {
       flex-direction: column;
-      gap: 24rem;
+      gap: 36rem;
+
+      .ft_tel {
+        display: block;
+        color: $color-white;
+        font-size: 32rem;
+        width: 110%;
+        text-align: center;
+        padding: 20rem 0;
+        border-bottom: 1px solid $color-dark;
+
+
+        i {
+          vertical-align: middle;
+        }
+      }
+
     }
 
+
     .left {
-      ul li ~ li::before {
+      ul li~li::before {
         display: none;
       }
     }

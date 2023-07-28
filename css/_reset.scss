@@ -52,10 +52,12 @@ body {
   letter-spacing: -0.025em;
   word-break: keep-all;
   font-size: 16rem;
+  overflow-x: hidden;
 }
 
 html {
   font-size: 6.25%;
+  overflow-x: hidden;
 }
 
 .blind {
