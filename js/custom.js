@@ -18,21 +18,19 @@ $(function () {
     },
     // 전환되고 나서
     afterLoad: function (lnk, idx) {
-      // 윈도우 크기가  768보다 클 때 작동해라
-      if ($(window).width() > 768)
 
-        if (idx == 6) {
-          // idx 가 6일 때 애니메이션 한번만 작동하고 멈추게 함.
-          $(".Main__content .section")
-            .eq(idx - 1)
-            .addClass("on");
-        } else {
-          $(".Main__content .section")
-            .eq(idx - 1)
-            .addClass("on")
-            .siblings()
-            .removeClass("on");
-        }
+      if (idx == 6) {
+        // idx 가 6일 때 애니메이션 한번만 작동하고 멈추게 함.
+        $(".Main__content .section")
+          .eq(idx - 1)
+          .addClass("on");
+      } else {
+        $(".Main__content .section")
+          .eq(idx - 1)
+          .addClass("on")
+          .siblings()
+          .removeClass("on");
+      }
     },
     // 전환되기 직전에
     beforeLeave: function (idx, nidx, dir, origin) { },

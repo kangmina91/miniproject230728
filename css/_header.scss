@@ -215,7 +215,7 @@
     bottom: 50%;
     right: 0;
     z-index: 999;
-    padding: 0 15rem;
+    // padding: 0 15rem;
 
     &.on {
 
@@ -234,7 +234,7 @@
             a {
                 position: relative;
                 display: block;
-                width: 36rem;
+                width: 48rem;
                 height: 16rem;
                 color: $color-white;
 
