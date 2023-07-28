@@ -54,16 +54,17 @@
         gap: 20rem;
         font-size: 16rem;
 
-
+        li {
+            a {
+                line-height: 20rem;
+            }
+        }
     }
 
-    .adress {
+    .adress,
+    .reference {
         margin: 0 0 8rem 0;
     }
 
-    .reference {
-        color: $color-line;
-        margin: 0 0 16rem 0;
-        font-weight: 700;
-    }
+
 }

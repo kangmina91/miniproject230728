@@ -899,13 +899,14 @@ p {
   gap: 20rem;
   font-size: 16rem;
 }
-.footer .adress {
-  margin: 0 0 8rem 0;
+.footer .contact li a,
+.footer .adress li a,
+.footer .reference li a {
+  line-height: 20rem;
 }
+.footer .adress,
 .footer .reference {
-  color: #ddd;
-  margin: 0 0 16rem 0;
-  font-weight: 700;
+  margin: 0 0 8rem 0;
 }
 
 @media (max-width: 768px) {
@@ -949,7 +950,7 @@ p {
   }
   .gnb ul li a {
     position: relative;
-    bottom: -150rem;
+    bottom: -200rem;
     margin: 0 0 30rem 0;
     height: 30rem;
   }
@@ -959,7 +960,7 @@ p {
     font-weight: 700;
     color: #9e826f;
     height: 120%;
-    border-bottom: 4rem solid #444444;
+    border-bottom: 2rem solid #444444;
   }
   .gnb ul li a::after {
     display: none;
@@ -1056,15 +1057,16 @@ p {
   .Main__content .sub01 {
     display: grid;
     grid-template-columns: 1 1fr;
-    margin: 0 0 840rem 0;
+    margin: 0 0 680rem 0;
   }
   .Main__content .sub01 .left {
     float: none;
     width: 100%;
-    height: 100%;
+    height: -moz-max-content;
+    height: max-content;
   }
   .Main__content .sub01 .left .content {
-    padding: 64rem 15rem;
+    padding: 48rem 15rem;
   }
   .Main__content .sub01 .left .content .title_box span {
     font-size: 20rem;
@@ -1074,11 +1076,12 @@ p {
   }
   .Main__content .sub01 .right {
     width: 100%;
-    height: 100%;
+    height: -moz-max-content;
+    height: max-content;
     float: none;
   }
   .Main__content .sub01 .right .content {
-    padding: 64rem 15rem 100rem 15rem;
+    padding: 48rem 15rem;
   }
   .Main__content .sub01 .right .content .txt_box {
     margin: 0 0 32rem 0;
@@ -1105,7 +1108,7 @@ p {
     background: url(../images/commu_bg.jpg) center top/cover;
   }
   .Main__content .sub02 .content {
-    padding: 64rem 15rem;
+    padding: 48rem 15rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 64rem;
@@ -1141,10 +1144,10 @@ p {
     background: url(../images/clein_bg.jpg) right 40% bottom/cover;
   }
   .Main__content .sub03 .content {
-    padding: 64rem 0;
+    padding: 48rem 0;
   }
   .Main__content .sub03 .content .title_box {
-    margin: 0 auto 64rem auto;
+    margin: 0 auto 48rem auto;
     width: 80%;
   }
   .Main__content .sub03 .content .title_box strong {
@@ -1169,7 +1172,7 @@ p {
 }
 @media (max-width: 768px) {
   .Main__content .sub04 .content {
-    padding: 64rem 0;
+    padding: 48rem 0;
   }
   .Main__content .sub04 .content .title_box {
     margin: 0 0 36rem 0;
@@ -1228,7 +1231,9 @@ p {
     text-align: center;
     gap: 8rem;
   }
+  .footer .adress,
   .footer .reference {
+    margin: 0 0 8rem 0;
     text-align: center;
   }
   .footer span {

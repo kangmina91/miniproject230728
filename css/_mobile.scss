@@ -51,7 +51,7 @@
 
         a {
           position: relative;
-          bottom: -150rem;
+          bottom: -200rem;
           margin: 0 0 30rem 0;
           height: 30rem;
 
@@ -61,7 +61,7 @@
             font-weight: 700;
             color: $color-mf ;
             height: 120%;
-            border-bottom: 4rem solid $color-dark ;
+            border-bottom: 2rem solid $color-dark ;
           }
 
           &::after {
@@ -202,16 +202,16 @@
     .sub01 {
       display: grid;
       grid-template-columns: 1 1fr;
-      margin: 0 0 840rem 0;
+      margin: 0 0 680rem 0;
 
       .left {
         float: none;
         width: 100%;
-        height: 100%;
+        height: max-content;
 
 
         .content {
-          padding: 64rem 15rem;
+          padding: 48rem 15rem;
 
           .title_box {
             span {
@@ -227,11 +227,11 @@
 
       .right {
         width: 100%;
-        height: 100%;
+        height: max-content;
         float: none;
 
         .content {
-          padding: 64rem 15rem 100rem 15rem;
+          padding: 48rem 15rem;
 
           .txt_box {
             margin: 0 0 32rem 0;
@@ -271,7 +271,7 @@
       background: url(../images/commu_bg.jpg) center top/cover;
 
       .content {
-        padding: 64rem 15rem;
+        padding: 48rem 15rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 64rem;
@@ -324,10 +324,10 @@
       background: url(../images/clein_bg.jpg) right 40% bottom/cover;
 
       .content {
-        padding: 64rem 0;
+        padding: 48rem 0;
 
         .title_box {
-          margin: 0 auto 64rem auto;
+          margin: 0 auto 48rem auto;
           width: 80%;
 
           strong {
@@ -364,7 +364,7 @@
   .Main__content {
     .sub04 {
       .content {
-        padding: 64rem 0;
+        padding: 48rem 0;
 
         .title_box {
           margin: 0 0 36rem 0;
@@ -442,9 +442,13 @@
       flex-direction: column;
       text-align: center;
       gap: 8rem;
+
     }
 
+
+    .adress,
     .reference {
+      margin: 0 0 8rem 0;
       text-align: center;
     }
 
