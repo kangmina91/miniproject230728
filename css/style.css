@@ -215,21 +215,6 @@ p {
     /* 390 size에 맞춤 (16/390*6.25/100) 디자인 사이즈 */
   }
 }
-@media (max-width: 860px) {
-  html {
-    font-size: 0.1302083333vw;
-  }
-}
-@media (max-width: 1023px) {
-  html {
-    font-size: 0.0977517107vw;
-  }
-}
-@media (max-width: 1480px) {
-  html {
-    font-size: 0.0675675676vw;
-  }
-}
 /* 그냥 반응형을 만들어버리는 소스 */
 .r_inner {
   display: grid;
