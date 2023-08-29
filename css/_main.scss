@@ -13,8 +13,10 @@
     .inner {
       .txt_box {
         position: absolute;
-        right: 15%;
-        top: 250rem;
+        transform: translate(-50%, -50%);
+        right: 50%;
+        top: 50%;
+        margin: -200rem -600rem 0 0;
         color: $color-white;
 
         span {
@@ -102,7 +104,7 @@
       background: $color-black;
 
       .content {
-        padding: 132rem 15rem;
+        padding: 132rem 70rem;
         max-width: 700rem;
         margin: 0 auto;
         color: $color-white;
@@ -128,6 +130,12 @@
 
         .img_box {
           margin: 0 0 40rem 0;
+          text-align: center;
+
+          img {
+            height: 320rem;
+            width: 100%;
+          }
         }
 
         .txt_box {
@@ -162,7 +170,7 @@
       background: $color-white;
 
       .content {
-        padding: 132rem 15rem;
+        padding: 132rem 70rem;
         max-width: 700rem;
         margin: 0 auto;
 
@@ -193,6 +201,11 @@
 
         .img_box {
           position: relative;
+
+          img {
+            height: 450rem;
+            width: 100%;
+          }
 
           .btn_box {
             width: 224rem;
@@ -231,7 +244,7 @@
     background: url(../images/commu_bg.jpg) center top/cover;
 
     .content {
-      padding: 100rem 15rem 0 15rem;
+      padding: 100rem 70rem 0 70rem;
       display: grid;
       grid-template-columns: 3fr 4fr;
       gap: 124rem;
@@ -421,29 +434,27 @@
           &::before {
             content: "";
             position: absolute;
-            left: -36rem;
+            left: 50%;
             top: 50%;
             transform: translate(0, -50%);
             width: 1px;
             height: 420rem;
             background: $color-white;
+            margin: 0 0 0 160rem;
 
           }
         }
 
         .itm01 {
-          left: 240rem;
-          top: 152rem;
+          margin: -400rem 0 0 100rem;
         }
 
         .itm02 {
-          left: 400rem;
-          bottom: 240rem;
+          margin: 50rem 0 0 240rem;
         }
 
         .itm03 {
-          right: 240rem;
-          bottom: 60rem;
+          margin: 200rem 0 0 900rem;
         }
       }
     }
@@ -456,6 +467,7 @@
 
     .content {
       color: $color-white;
+      padding: 0 80rem;
 
       .title_box {
         text-align: center;
