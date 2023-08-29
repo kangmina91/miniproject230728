@@ -166,7 +166,7 @@
       .inner {
         .txt_box {
           position: absolute;
-          width: 224rem;
+          width: 200rem;
           color: $color-white;
           margin: -160rem -190rem 0 0;
 
@@ -176,6 +176,7 @@
             font-weight: 300;
             color: $color-line;
             margin: 0 0 16rem 0;
+            line-height: 24rem;
           }
 
           strong {
@@ -183,6 +184,7 @@
             font-size: 36rem;
             letter-spacing: 0.025em;
             font-weight: 700;
+            line-height: 42rem;
           }
 
           p {

@@ -23,6 +23,7 @@
           display: block;
           font-size: 32rem;
           font-weight: 200;
+          line-height: 36rem;
           color: $color-line;
           margin: 0 0 16rem 0;
           animation: TxtDownAni 1s both;
@@ -36,6 +37,7 @@
           margin: 0 0 32rem 0;
           animation: TxtDownAni02 1s both;
           animation-delay: 1s;
+          line-height: 76rem;
         }
 
         p {

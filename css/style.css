@@ -507,6 +507,7 @@ p {
   display: block;
   font-size: 32rem;
   font-weight: 200;
+  line-height: 36rem;
   color: #ddd;
   margin: 0 0 16rem 0;
   animation: TxtDownAni 1s both;
@@ -519,6 +520,7 @@ p {
   margin: 0 0 32rem 0;
   animation: TxtDownAni02 1s both;
   animation-delay: 1s;
+  line-height: 76rem;
 }
 .Main__content .main .inner .txt_box p {
   font-size: 18rem;
@@ -1045,7 +1047,7 @@ p {
   }
   .Main__content .main .inner .txt_box {
     position: absolute;
-    width: 224rem;
+    width: 200rem;
     color: #fff;
     margin: -160rem -190rem 0 0;
   }
@@ -1055,12 +1057,14 @@ p {
     font-weight: 300;
     color: #ddd;
     margin: 0 0 16rem 0;
+    line-height: 24rem;
   }
   .Main__content .main .inner .txt_box strong {
     display: block;
     font-size: 36rem;
     letter-spacing: 0.025em;
     font-weight: 700;
+    line-height: 42rem;
   }
   .Main__content .main .inner .txt_box p {
     display: none;
