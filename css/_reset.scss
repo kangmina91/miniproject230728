@@ -129,6 +129,24 @@ p {
 
 }
 
+@media (max-width: 860px) {
+  html {
+    font-size: 0.13020833333333335vw;
+  }
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 0.09775171065493645vw;
+  }
+}
+
+@media (max-width: 1480px) {
+  html {
+    font-size: 0.06756756756756757vw;
+  }
+}
+
 /* 그냥 반응형을 만들어버리는 소스 */
 .r_inner {
   display: grid;
