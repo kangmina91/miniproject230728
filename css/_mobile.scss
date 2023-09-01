@@ -98,7 +98,7 @@
     display: block;
 
     position: fixed;
-    inset: 15rem 15rem auto auto;
+    inset: 15rem 30rem auto auto;
     z-index: 1000;
     width: 30rem;
     height: 30rem;
@@ -201,17 +201,18 @@
   .Main__content {
     .sub01 {
       display: grid;
-      grid-template-columns: 1 1fr;
-      margin: 0 0 940rem 0;
+      grid-template-columns: 1fr;
+      margin: 0 0 1000rem 0;
+
 
       .left {
         float: none;
         width: 100%;
-        height: max-content;
-
+        height: auto;
 
         .content {
-          padding: 48rem 15rem;
+          margin: 0;
+          padding: 36rem 15rem;
 
           .title_box {
             span {
@@ -227,11 +228,12 @@
 
       .right {
         width: 100%;
-        height: max-content;
         float: none;
+        height: auto;
 
         .content {
-          padding: 48rem 15rem;
+          margin: 0;
+          padding: 36rem 15rem;
 
           .txt_box {
             margin: 0 0 32rem 0;

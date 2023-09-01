@@ -99,16 +99,18 @@
 
   // 서브섹션01
   .sub01 {
+
     .left {
       width: calc(100% / 2);
       float: left;
       height: 100vh;
       background: $color-black;
 
+
       .content {
-        padding: 132rem 70rem;
-        max-width: 700rem;
-        margin: 0 auto;
+        max-width: 600rem;
+
+        margin: 160px auto;
         color: $color-white;
 
 
@@ -172,9 +174,8 @@
       background: $color-white;
 
       .content {
-        padding: 132rem 70rem;
-        max-width: 700rem;
-        margin: 0 auto;
+        max-width: 600rem;
+        margin: 160px auto;
 
         .txt_box {
           margin: 0 0 30rem 0;
