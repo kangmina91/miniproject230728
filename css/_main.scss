@@ -11,7 +11,7 @@
     background: url(../images/main01.jpg) center top/cover;
 
     .inner {
-      .txt_box {
+      .txt_box_view {
         position: absolute;
         transform: translate(-50%, -50%);
         right: 50%;
@@ -49,49 +49,6 @@
 
       }
 
-      /* 메인 슬라이드 스크롤 효과 */
-      // .scroll_box {
-      //   position: absolute;
-      //   right: -4rem;
-      //   bottom: 92rem;
-      //   transform: translate(-50%, -50%);
-      //   z-index: 1001;
-
-      //   span {
-      //     position: relative;
-      //     color: $color-white;
-      //     font-weight: 600;
-      //     font-size: 12rem;
-      //     text-transform: uppercase;
-
-      //     &::before {
-
-      //       content: "";
-      //       position: absolute;
-      //       top: 20rem;
-      //       left: 50%;
-      //       width: 1rem;
-      //       height: 100rem;
-      //       background: $color-white;
-      //       transform: translate(-50%, 0);
-      //     }
-
-      //     &::after {
-      //       content: "";
-      //       position: absolute;
-      //       top: 24rem;
-      //       left: 50%;
-      //       width: 4rem;
-      //       height: 4rem;
-      //       background: $color-white;
-      //       border-radius: 50%;
-      //       transform: translate(-50%, 0);
-      //       animation: circle 2s infinite cubic-bezier(1, .18, .49, 1.03);
-
-      //     }
-      //   }
-      // }
-
 
     }
   }
@@ -99,146 +56,151 @@
 
   // 서브섹션01
   .sub01 {
+    height: 100vh;
 
-    .left {
-      width: calc(100% / 2);
-      float: left;
-      height: 100vh;
-      background: $color-black;
+    .content_box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-
-      .content {
-        max-width: 600rem;
-
-        margin: 160px auto;
-        color: $color-white;
+      .left {
+        width: 100%;
+        height: 100vh;
+        background: $color-black;
 
 
-        .title_box {
-          margin: 0 0 36rem 0;
+        .content {
+          max-width: 600rem;
+
+          margin: 160px auto;
+
+          color: $color-white;
 
 
-          span {
-            font-size: 24rem;
-            font-weight: 200;
-            display: block;
-            margin: 0 0 8rem 0;
-          }
+          .title_box {
+            margin: 0 0 36rem 0;
 
-          strong {
-            font-size: 32rem;
-            font-weight: 700;
-            color: $color-mf;
-          }
-        }
 
-        .img_box {
-          margin: 0 0 40rem 0;
-          text-align: center;
-
-          img {
-            height: 320rem;
-            width: 100%;
-          }
-        }
-
-        .txt_box {
-          ul {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 20rem;
-
-            li {
-              strong {
-                display: block;
-                color: $color-mf;
-                font-size: 18rem;
-                font-weight: 700;
-                margin: 0 0 8rem 0;
-              }
-
-              p {
-                font-weight: 200;
-                color: $color-rgba25505;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .right {
-      width: calc(100% / 2);
-      float: right;
-      height: 100vh;
-      background: $color-white;
-
-      .content {
-        max-width: 600rem;
-        margin: 160px auto;
-
-        .txt_box {
-          margin: 0 0 30rem 0;
-
-          ul {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 36rem;
-
-            li {
-              strong {
-                display: block;
-                color: $color-mf;
-                font-size: 18rem;
-                font-weight: 700;
-                margin: 0 0 8rem 0;
-              }
-
-              p {
-                font-weight: 400;
-                color: $color-dark;
-              }
-            }
-          }
-        }
-
-        .img_box {
-          position: relative;
-
-          img {
-            height: 450rem;
-            width: 100%;
-          }
-
-          .btn_box {
-            width: 224rem;
-            height: 54rem;
-            left: 0;
-            bottom: 0;
-            position: absolute;
-            background-color: #9d9d9d;
-            color: #fff;
-            font-weight: 400;
-            line-height: 54rem;
-
-            a {
+            span {
+              font-size: 24rem;
+              font-weight: 200;
               display: block;
-              padding-left: 20rem;
-              width: 100%;
-              height: 100%;
+              margin: 0 0 8rem 0;
+            }
 
-              i {
-                font-size: 24rem;
-                margin: 0 0 0 24rem;
-                vertical-align: top;
+            strong {
+              font-size: 32rem;
+              font-weight: 700;
+              color: $color-mf;
+            }
+          }
+
+          .img_box {
+            margin: 0 0 40rem 0;
+            text-align: center;
+
+            img {
+              height: 320rem;
+              width: 100%;
+            }
+          }
+
+          .txt_box {
+            ul {
+              display: grid;
+              grid-template-columns: repeat(1, 1fr);
+              gap: 20rem;
+
+              li {
+                strong {
+                  display: block;
+                  color: $color-mf;
+                  font-size: 18rem;
+                  font-weight: 700;
+                  margin: 0 0 8rem 0;
+                }
+
+                p {
+                  font-weight: 200;
+                  color: $color-rgba25505;
+                }
               }
             }
           }
         }
-
-
       }
 
+      .right {
+        width: 100%;
+        height: 100vh;
+        background: $color-white;
+
+        .content {
+          max-width: 600rem;
+          margin: 160px auto;
+
+          .txt_box {
+            margin: 0 0 30rem 0;
+
+            ul {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 36rem;
+
+              li {
+                strong {
+                  display: block;
+                  color: $color-mf;
+                  font-size: 18rem;
+                  font-weight: 700;
+                  margin: 0 0 8rem 0;
+                }
+
+                p {
+                  font-weight: 400;
+                  color: $color-dark;
+                }
+              }
+            }
+          }
+
+          .img_box {
+            position: relative;
+
+            img {
+              height: 450rem;
+              width: 100%;
+            }
+
+            .btn_box {
+              width: 224rem;
+              height: 54rem;
+              left: 0;
+              bottom: 0;
+              position: absolute;
+              background-color: #9d9d9d;
+              color: #fff;
+              font-weight: 400;
+              line-height: 54rem;
+
+              a {
+                display: block;
+                padding-left: 20rem;
+                width: 100%;
+                height: 100%;
+
+                i {
+                  font-size: 24rem;
+                  margin: 0 0 0 24rem;
+                  vertical-align: top;
+                }
+              }
+            }
+          }
+
+
+        }
+
+      }
     }
   }
 

@@ -164,7 +164,7 @@
       background: url(../images/main01.jpg) center center/cover;
 
       .inner {
-        .txt_box {
+        .txt_box_view {
           position: absolute;
           width: 200rem;
           color: $color-white;
@@ -198,64 +198,63 @@
 
 // 서브섹션1
 @media (max-width: 768px) {
+
+
   .Main__content {
+
     .sub01 {
-      display: grid;
-      grid-template-columns: 1fr;
-      margin: 0 0 1000rem 0;
 
+      .content_box {
+        grid-template-columns: 1fr;
 
-      .left {
-        float: none;
-        width: 100%;
-        height: auto;
+        .left {
+          height: 100%;
+          padding: 0 15rem;
 
-        .content {
-          margin: 0;
-          padding: 36rem 15rem;
+          .content {
+            margin: 100rem auto;
 
-          .title_box {
-            span {
-              font-size: 20rem;
-            }
+            .title_box {
+              span {
+                font-size: 20rem;
+              }
 
-            strong {
-              font-size: 36rem;
+              strong {
+                font-size: 36rem;
+              }
             }
           }
         }
-      }
 
-      .right {
-        width: 100%;
-        float: none;
-        height: auto;
+        .right {
+          height: 100%;
+          padding: 0 15rem;
 
-        .content {
-          margin: 0;
-          padding: 36rem 15rem;
+          .content {
+            margin: 100rem auto;
 
-          .txt_box {
-            margin: 0 0 32rem 0;
+            .txt_box {
+              margin: 0 0 32rem 0;
 
-            ul {
-              display: grid;
-              grid-template-columns: repeat(1, 1fr);
-              gap: 24rem;
+              ul {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 24rem;
+              }
             }
-          }
 
-          .img_box {
-            position: relative;
+            .img_box {
+              position: relative;
 
-            .btn_box {
-              left: 50%;
-              transform: translate(-50%, -50%);
-              bottom: -108rem;
+              .btn_box {
+                left: 50%;
+                transform: translate(-50%, -50%);
+                bottom: -108rem;
 
-              a {
-                i {
-                  font-size: 20rem;
+                a {
+                  i {
+                    font-size: 20rem;
+                  }
                 }
               }
             }

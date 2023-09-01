@@ -148,7 +148,7 @@ p {
     transition: 0.5s 0.5s;
   }
 
-  .txt_box {
+  .txt_box_view {
     opacity: 0;
     transition: 0.5s 0.5s;
   }
@@ -170,7 +170,7 @@ p {
     transition: 0.5s;
   }
 
-  .txt_box {
+  .txt_box_view {
     animation: TxtUpAni 1.5s both;
     opacity: 1;
     transition: 0.5s;
